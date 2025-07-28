@@ -59,29 +59,6 @@ header {
   background-color: #111;
 }
 
-.rotating-logo-container {
-  position: fixed;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  z-index: 100;
-  padding-left: 10px;
-}
-
-.rotating-logo {
-  width: 80px;
-  animation: rotate 12s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 section {
   padding: 2rem;
   max-width: 900px;
@@ -135,62 +112,11 @@ footer {
   color: #777;
 }
 
-.badge-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 2px solid #f2c76e;
-  border-radius: 12px;
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 300px;
-  background-color: #111;
-}
-
-.badge {
-  width: 100px;
-  margin: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .rotating-logo {
-    display: none;
-  }
-
-  .top-logo {
-    width: 180px;
-  }
-
-  section {
-    padding: 1.5rem 1rem;
-  }
-
-  .badge-box {
-    width: 90%;
-  }
-}
-.certification-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-  background-color: #1b1b1b;
-  padding: 1rem;
-  border: 2px solid #f2c76e;
-  border-radius: 8px;
-  box-shadow: 0 0 12px rgba(242, 199, 110, 0.3);
-}
-.certification-icons img {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
+/* BADGES SECTION */
 .badge-section {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 .badge-container {
@@ -221,4 +147,19 @@ footer {
   color: #fff;
   font-weight: 600;
   font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .top-logo {
+    width: 180px;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  .badge-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
