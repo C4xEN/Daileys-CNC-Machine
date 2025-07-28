@@ -169,3 +169,20 @@ footer {
     width: 90%;
   }
 }
+.certification-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  background-color: #1b1b1b;
+  padding: 1rem;
+  border: 2px solid #f2c76e;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(242, 199, 110, 0.3);
+}
+.certification-icons img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
