@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #111;
@@ -11,96 +10,143 @@ body {
   line-height: 1.6;
 }
 
-.logo {
-  max-width: 220px;
-  margin-bottom: 1rem;
-}
-
-.hero-section {
-  background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), url('Brushed-Steel-CNC-Nameplate.png') center/cover no-repeat;
-  padding: 4rem 2rem;
+.logo-wrapper {
   text-align: center;
-  color: #f2f2f2;
+  margin-top: 2rem;
+}
+.metal-logo {
+  width: 180px;
+  border: 4px solid #d6b26a;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(214, 178, 106, 0.5);
 }
 
-.hero-section h1 {
+header {
+  text-align: center;
+  padding: 2rem;
+}
+h1 {
   font-size: 2.75rem;
   font-weight: 900;
-  color: #d6b26a; /* Brushed gold tone */
-  margin-bottom: 1rem;
+  color: #d6b26a;
 }
-
 .tagline {
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: #c0c0c0;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
 }
-
 .cta-button {
   display: inline-block;
   background-color: #d6b26a;
   color: #111;
   font-weight: bold;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.8rem;
   text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: 30px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease;
 }
-
 .cta-button:hover {
   background-color: #b3944e;
   transform: scale(1.05);
 }
 
-main h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #f2f2f2;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-/* Capabilities & Industries */
 section {
-  padding: 3rem 2rem;
+  padding: 2rem;
   max-width: 1000px;
   margin: auto;
 }
-
-.capabilities ul,
-.about ul {
-  list-style-type: none;
-  margin-top: 1rem;
+h2 {
+  text-align: center;
+  color: #f2f2f2;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
-
-.capabilities li,
-.about li {
-  background-color: #1b1b1b;
-  margin-bottom: 0.75rem;
+ul {
+  list-style-type: none;
+}
+ul li {
+  background: #1c1c1c;
   padding: 1rem;
   border-left: 5px solid #d6b26a;
   border-radius: 4px;
+  margin-bottom: 1rem;
 }
 
-.contact form {
+.about p {
+  font-style: italic;
+  text-align: center;
+  color: #ccc;
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.badges {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+.badges img {
+  height: 50px;
+  opacity: 0.9;
+  filter: grayscale(20%);
 }
 
-.contact input,
-.contact textarea {
+.map iframe {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.rotating-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.rotating-logo {
+  width: 150px;
+  animation: rotateLogo 20s linear infinite;
+  opacity: 0.6;
+}
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  background-color: #222;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #444;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
   padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background-color: #1c1c1c;
+  margin-bottom: 1rem;
+  background-color: #111;
+  border: 1px solid #444;
   color: #f2f2f2;
+  border-radius: 4px;
 }
-
-.contact button {
+.modal-content button {
+  width: 100%;
   padding: 0.75rem;
   background-color: #d6b26a;
   border: none;
@@ -108,30 +154,28 @@ section {
   color: #111;
   cursor: pointer;
   border-radius: 5px;
-  transition: 0.3s;
 }
-
-.contact button:hover {
-  background-color: #b3944e;
+.close {
+  float: right;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
 }
 
 footer {
   background-color: #0d0d0d;
   color: #999;
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
+  padding: 1rem;
 }
 
 @media (max-width: 768px) {
-  .hero-section h1 {
+  h1 {
     font-size: 2rem;
   }
-
-  .tagline {
-    font-size: 1rem;
+  .metal-logo {
+    width: 140px;
   }
-
   .cta-button {
     padding: 0.6rem 1.2rem;
   }
